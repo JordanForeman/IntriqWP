@@ -1,0 +1,346 @@
+@import "compass/css3";
+
+$darkGrey: #404749;
+$purple: #6E00FF;
+$black: #1A1C27;
+
+$topNavHeight: 60px;
+$borderRadius: 3px;
+
+$gutter: 15px;
+
+body
+{
+  background-color: $black;
+  font-weight: 100;
+  color: WHITE;
+  
+  line-height: 1.8em;
+}
+
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0; right: 0;
+  
+  z-index: 999;
+  
+  display: block;
+  width: 100%;
+  height: 45px;
+  
+  padding-left: $gutter;
+  
+  background-color: $darkGrey;
+  border-bottom: 2px solid $purple;
+  
+  box-shadow: 0 0 13px BLACK;
+  
+  h1, h2
+  {
+    display: inline;
+    font-size: 1em;
+  }
+
+  .search 
+  {
+    display: block;
+    height: 100%;
+  
+    padding: 0 5px; 
+    margin: 0;
+  
+    float: right;
+    margin-right: $gutter;
+  
+    border: none;
+  
+    color: WHITE;
+  
+    background-color: darken($darkGrey, 5);
+  
+    &:focus
+    {
+      outline: none;
+    }
+  }
+
+  h1, h2
+  {
+    line-height: 45px;
+  }
+}
+
+button, .button
+{
+  display: block;
+  
+  padding: 10px $gutter;
+  
+  border: 1px solid WHITE;
+  color: WHITE;
+  text-decoration: none;
+  text-align: center;
+  
+  background-color: $black;
+  border-radius: $borderRadius;
+  
+  -webkit-transition: all .2s linear;
+  
+  &:hover
+  {
+    background-color: WHITE;
+    color: $black;
+  }
+
+  &:focus
+  {
+    outline: none;
+  }
+
+  &.call-to-action
+  {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+h1, h2, h3
+{
+  display: inline-block;
+  
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  margin: 0;
+  
+  line-height: 1.7em;
+}
+
+#page-wrap
+{
+  display: block;
+  
+  position: relative;
+  
+  height: 100%;
+  width: 100%;
+  
+  //margin-top: $topNavHeight;
+}
+
+#sidebar
+{ 
+  display: inline-block;
+  
+  position: fixed;
+  top: $gutter;
+  //top: 60px;
+  left: $gutter;
+  
+  width: 30%;
+  max-width: 300px;
+  
+  border-radius: $borderRadius;
+  
+  
+  background-color: WHITE;
+  //background-image: url('http://25.media.tumblr.com/409bbcf4966d6edec01720afd350dd29/tumblr_muugsh1DKt1sfie3io1_1280.jpg');
+  //background-size: cover;
+}
+
+nav
+{
+  
+  ul.nav
+  {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    
+    text-align: center;
+    
+    li
+    {
+      position: relative;
+      
+      display: block;
+      width: 100%;
+      height: 45px;
+      
+      line-height: 45px;
+      
+      -webkit-transition: all .2s linear;
+      
+      border-bottom: 1px solid lighten($darkGrey, 50);
+      
+      &:last-of-type
+      {
+        border-bottom: 0;
+      }
+      
+      &:hover
+      {
+        background-color: RGBA(0, 0, 0, .5);
+        a{color: $black;}
+      }
+      
+      &.active
+      {
+        background-color: $black;
+  
+        a {color: WHITE;}
+      }
+
+      a
+      {
+        display: block;
+        height: 100%;
+        width: 100%;
+        text-decoration: none;
+  
+        color: $black;
+      }
+    }
+  }
+}
+
+#main-content
+{
+  display: inline-block;
+  padding: 10px 100px;
+  
+  margin-left: 300px;
+}
+
+section
+{
+  padding-top: 50px;
+  
+  &:first-of-type, &#sidebar
+  {
+    padding-top: 0;
+  }
+}
+
+ul.skills
+{
+  list-style-type: none;
+  
+  li
+  {
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .skill-desc
+  {
+    display: none;
+  
+    -webkit-transition: all .2s linear;
+  }
+}
+
+.blogroll
+{
+  display: table;
+  border-spacing: $gutter;
+}
+
+article
+{
+  &.sip
+  {
+    display: table-cell;
+    border: 10px solid transparent;
+  }
+  
+}
+
+footer
+{
+  text-align: center;
+  
+  ul.nav
+  {
+    display: block;
+    width: 100%;
+    
+    margin: 0 auto; 
+    padding: 0;
+    
+    text-align: center;
+    
+    li
+    {
+      display: inline-block;
+      
+      margin-right: $gutter;
+    }
+  }
+}
+
+.well
+{
+  display: block;
+  margin-bottom: 15px;
+  padding: $gutter;
+  
+  background-color: lighten($black, 5);
+  
+  border-radius: $borderRadius;
+}
+
+.projects
+{
+  display: table;
+  border-spacing: $gutter;
+  
+  padding: 0; margin: 0 auto;
+  
+  list-style-type: none;
+  
+  li
+  {
+    display: table-cell;
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    
+    img
+    {
+      width: 100%;
+    
+      border-radius: $borderRadius;
+    }
+  }
+}
+
+.scrollTop
+{
+  $size: 50px;
+  
+  position: fixed;
+  bottom: $gutter; left: $gutter;
+  
+  display: block;
+  height: $size; width: $size;
+  
+  background-color: rgba(255, 255, 255, .2);
+  
+  border-radius: $borderRadius;
+  
+  text-align: center;
+  line-height: $size;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 2em;
+  color: WHITE;
+  
+  -webkit-transition: all .2s linear;
+  
+  &:hover
+  {
+    background-color: transparent;
+  }
+}
