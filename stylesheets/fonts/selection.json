@@ -1,0 +1,28 @@
+{
+	"IcoMoonType": "selection",
+	"icons": [
+		{
+			"icon": {
+				"paths": [
+					"M512.002 0l-512.002 512h320v511.998l384 0.002v-512h320z"
+				],
+				"tags": [
+					"arrow-up",
+					"upload",
+					"top"
+				],
+				"grid": 16
+			},
+			"properties": {
+				"order": 1,
+				"id": 289,
+				"prevSize": 32,
+				"code": 59168,
+				"name": "arrow-up",
+				"ligatures": ""
+			}
+		}
+	],
+	"height": 1024,
+	"metadata": {}
+}
