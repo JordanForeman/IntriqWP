@@ -59,9 +59,39 @@ header
       display: block;
       height: 100%; width: 100%;
 
+      .slide-wrapper
+      {
+        position: relative;
+
+        display: block;
+        width: 100%; height: 100%;
+
+        padding: $gutter 50px;;
+      }
+
+      //Responsive Design Slide
       &:first-of-type
       {
+        display: table;
+        border-spacing: $gutter;
+
+        width: 100%;
+
         background-color: BLUE;
+
+        .slide-wrapper div
+        {
+          display: table-cell;
+          width: 50%;
+          text-align: left;
+        }
+
+        .slide-text
+        {
+          position: absolute;
+          left: 75px;
+          bottom: 50px;
+        }
       }
 
       &:nth-child(2)
